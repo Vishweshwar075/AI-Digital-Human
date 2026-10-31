@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1020">
+    <title>EVA | AI Virtual Human</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">E</div>
+                <div>
+                    <h2>Project EVA</h2>
+                    <p>AI Virtual Human</p>
+                </div>
+            </div>
+
+            <div class="avatar">
+                <div class="avatar-glow"></div>
+                <div class="avatar-face">E</div>
+                <span class="online-dot"></span>
+            </div>
+
+            <h1>EVA</h1>
+            <p class="subtitle">Your AI companion</p>
+
+            <div class="status">
+                <span class="status-dot"></span>
+                <span id="statusText">Ready to connect</span>
+            </div>
+
+            <div class="sidebar-note">
+                <span>✦</span>
+                <p>Ask questions, explore ideas, and have a conversation with EVA.</p>
+            </div>
+        </aside>
+
+        <section class="chat-panel">
+            <header class="chat-header">
+                <div>
+                    <h2>Conversation</h2>
+                    <p>Talk to your virtual human</p>
+                </div>
+                <button id="clearButton" class="clear-button" type="button">
+                    Clear chat
+                </button>
+            </header>
+
+            <div id="messages" class="messages" aria-live="polite">
+                <div class="message eva-message">
+                    <div class="message-avatar">E</div>
+                    <div class="bubble">
+                        <span class="sender">EVA</span>
+                        <p>Hello! I'm EVA, your AI virtual human. What would you like to talk about today?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="suggestions">
+                <button class="suggestion" type="button">Introduce yourself</button>
+                <button class="suggestion" type="button">Explain artificial intelligence</button>
+                <button class="suggestion" type="button">What can you do?</button>
+            </div>
+
+            <form id="chatForm" class="composer">
+                <label class="sr-only" for="messageInput">Your message</label>
+                <textarea
+                    id="messageInput"
+                    placeholder="Message EVA..."
+                    rows="1"
+                    maxlength="4000"
+                    required
+                ></textarea>
+                <button id="sendButton" type="submit" aria-label="Send message">
+                    ↑
+                </button>
+            </form>
+
+            <p class="disclaimer">
+                EVA is an AI assistant. Verify important information.
+            </p>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
